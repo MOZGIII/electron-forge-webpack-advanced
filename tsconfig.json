@@ -5,11 +5,11 @@
     "outDir": "dist",
     "lib": ["dom", "es2018"],
     "sourceMap": true,
-    "rootDir": "src",
+    "rootDir": ".",
     "experimentalDecorators": true,
     "strict": true,
     "esModuleInterop": true,
     "declaration": true
   },
-  "exclude": ["node_modules", "dist", "test", "index.ts"]
+  "exclude": ["node_modules", "dist", "index.ts"]
 }
