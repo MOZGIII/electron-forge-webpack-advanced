@@ -1,0 +1,26 @@
+name: "Main"
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  flow:
+    name: ${{ matrix.command }}
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        command:
+          - yarn test
+          - yarn eslint:check
+      fail-fast: true
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - run: yarn --frozen-lockfile
+      - run: ${{ matrix.command }}
