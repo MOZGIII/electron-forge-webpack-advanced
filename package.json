@@ -20,7 +20,8 @@
     "tsc:check": "tsc --noEmit",
     "build": "tsc",
     "test": "mocha --require ts-node/register test/**/*_spec.ts test/**/**/*_spec.ts",
-    "prepack": "yon build"
+    "prepack": "yon build",
+    "prepare": "echo Dummy prepare script to trigger prepackage at yarn"
   },
   "engines": {
     "node": ">= 10.0.0"
