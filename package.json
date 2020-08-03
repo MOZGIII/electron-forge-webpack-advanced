@@ -5,7 +5,8 @@
   "repository": "https://github.com/MOZGIII/electron-forge-webpack-advanced",
   "authors": [
     "Samuel Attard",
-    "MOZGIII"
+    "MOZGIII",
+    "electron-forge contributors"
   ],
   "license": "MIT",
   "main": "dist/WebpackPlugin.js",
