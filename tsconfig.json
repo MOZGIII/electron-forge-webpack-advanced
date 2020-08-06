@@ -11,5 +11,5 @@
     "esModuleInterop": true,
     "declaration": true
   },
-  "exclude": ["node_modules", "dist", "index.ts"]
+  "include": ["src", "test"]
 }
