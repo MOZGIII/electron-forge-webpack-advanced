@@ -19,7 +19,7 @@
     "eslint:fix": "yon eslint:check --fix",
     "tsc:check": "tsc --noEmit",
     "build": "tsc -p tsconfig.build.json",
-    "test": "mocha --require ts-node/register test/**/*_spec.ts test/**/**/*_spec.ts",
+    "test": "mocha",
     "prepack": "yon build",
     "prepare": "yon prepack"
   },
