@@ -1,4 +1,7 @@
-import { Configuration as WebpackConfiguration } from 'webpack';
+import {
+  Configuration as RawWebpackConfiguration,
+  ConfigurationFactory as WebpackConfigurationFactory,
+} from 'webpack';
 
 export interface WebpackPluginEntryPoint {
   /**
@@ -52,6 +55,12 @@ export interface WebpackPluginRendererConfig {
    * The webpack config for your renderer process
    */
   config: WebpackConfiguration | string;
+
+  /**
+   * The webpack config for your preload script - this is optional.
+   */
+  preloadConfig?: WebpackConfiguration | string;
+
   /**
    * Instructs webpack to emit a JSON file containing statistics about modules, the dependency
    * graph, and various other build information for the renderer process during the app
@@ -90,3 +99,5 @@ export interface WebpackPluginConfig {
    */
   loggerPort?: number;
 }
+
+export type WebpackConfiguration = RawWebpackConfiguration | WebpackConfigurationFactory;
